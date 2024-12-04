@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar i {
+    position: absolute;
+    left: 10px;
+    font-size: 1rem; 
+  }
+  
+  .search-input {
+    padding-left: 30px; 
+    width: 100%;
+    height: 38px; 
+  }
+  .head {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    background: url("./images/pexels-cottonbro-5990031.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.head .y1 {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    padding: 70px;
+}
+
+.minicardimg img{
+    width: 300px;
+    height: 300px;
+    margin-left: 75%;
+    margin-top: -250px;
+    /* box-shadow: 5px  5px 10px rgb(255, 255, 255) ; */
+    border: none;
+}
+.minicard{
+    background-color: whitesmoke;
+    /* background: url('./images/freepik_br_d4c8e454-78ab-4590-996a-5f2b80894baf.png') no-repeat center center/cover; Replace with actual background image */
+    margin-top: 80px;
+    width: 75%;
+    height: 200px;
+    color: black;
+    border-left: 8px;
+    justify-content: space-around;
+    
+
+}
+/* .carousel-item img{
+    height: 500px;
+    opacity: 0.25;
+    background: rgb(0, 0, 0);
+    
+}
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.90); /* Semi-transparent black */
+    /* z-index: 1; Below the fixed card but above the images */
+  /* } */
+
+  /* Ensure carousel images are visible underneath the overlay */
+  /* .carousel-inner img {
+    opacity: 1; /* Full opacity for images */
+   
+.nav {
+      border-bottom: 2px solid #fff; 
+      /* padding-bottom: 8px; Optional: space between text and border */
+      width: 100%;
+} 
+.nav-iteml{
+  margin-right: 87%;
+  margin-bottom: -60px;
+}
+.logo{
+  display: flex;
+  margin-right: -30px;
+}
+.navbar-brand{
+  margin-right: 70px;
+}
+.card {
+  background-color: #f8f9fa;
+  border-color: #e0e0e0;
+}
+
+.card-title {
+  color: #333;
+}
+
+.card-text {
+  color: #4b3a3a;
+}
+.card-header{
+  height: 70px;
+  
+  
+}
+.card-footer{
+  height: 90px;
+}
+.col-3{
+  margin-left: -37px;
+  margin-right: 37px;
+}
+.card {
+  border: none; /* Removes the outer border of the card */
+  box-shadow: none; /* Removes any shadow around the card, if present */
+}
+
+.card-header, .card-footer {
+  border: none; /* Removes borders from header and footer sections */
+}
+</style>
+<body>
+    <nav class="navbar fixed-top bg-body-tertiary ">
+        <div class="container-fluid ms-5 me-5">
+          <a class="navbar-brand me-5"> <i class="fa-solid fa-envelope fa-beat"></i>info@companyname <i class="fa-solid fa-phone fa-beat-fade"></i>0001 800-123456</a>
+          <form class="d-flex" role="search">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+          </form>
+          
+        </div>
+    </nav>
+    <div class="head">
+        <div class="y1">
+            <ul class="nav justify-content-end h-25 ">
+              <li class="nav-iteml mt-2 ">
+                <div class="logo">
+                  <h1 class="text-info">LOGO</h1>
+                  <h1 class="text-light">HERE</h1>
+                </div>
+
+              </li>
+                <li class="nav-item mt-2">
+                  <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a class="nav-link text-light" href="#">Services</a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a class="nav-link  text-light" href="#">About Us</a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a class="nav-link active text-light" aria-current="page" href="#">Our Works </a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a class="nav-link  text-light" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div class="minicard">
+              
+                  <h1 class="ms-3"><u>LOREM IPSUM IS SIMPLY DUMMY</u></h1>
+                  <di class="ms-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.  Itaque repellendus suscipit quos nulla dolor quasi maxime dignissimos
+                  <button type="button" class="btn btn-info mt-3 ms-3 " >Learn more</button>
+              
+            </div>
+            <div class="minicardimg">
+              <img src="./images/WhatsApp Image 2024-11-28 at 12.34.15_74a1fe83.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active "data-bs-interval="2000">
+            <img src="./images/pexels-cottonbro-5990031.jpg" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
+
+
+
+      <div class="mainbody">
+        <div class="container2 ms-5">
+          <div class="row ms-5 me-2">
+            <div class="col-3 w-25 h-25 " style="width: 100;">
+              <div class="card">
+                <div class="card-header text-center mt-2">
+                  LOREM IPSUM
+                </div>
+                <div class="card-body">
+                    <img src="./images/pexels-sebastian-palomino-933481-1955134.jpg" class="w-100 " alt="">
+                </div>
+                <div class="card-footer text-center bg-info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi in laboriosam id corrupti velit
+                </div>
+            </div>
+            </div>
+            <div class="col-3 w-25 h-25 " style="width: 100;">
+              <div class="card">
+                <div class="card-header text-center mt-2">
+                  LOREM IPSUM
+                </div>
+                <div class="card-body">
+                    <img src="./images/WhatsApp Image 2024-11-28 at 12.34.15_74a1fe83.jpg" class="w-100 " alt="">
+                </div>
+                <div class="card-footer text-center bg-info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi in laboriosam id corrupti velit
+                </div>
+            </div>
+            </div>
+            <div class="col-3 w-25 h-25 " style="width: 100;">
+              <div class="card">
+                <div class="card-header text-center mt-2">
+                  LOREM IPSUM
+                </div>
+                <div class="card-body">
+                    <img src="./images/pexels-larsmulder-10964216.jpg" class="w-100 " alt="">
+                </div>
+                <div class="card-footer text-center bg-info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi in laboriosam id corrupti velit
+                </div>
+            </div>
+            </div>
+            <div class="col-3 w-25 h-25 " style="width: 100;">
+              <div class="card">
+                <div class="card-header text-center mt-2">
+                  LOREM IPSUM
+                </div>
+                <div class="card-body">
+                    <img src="./images/pexels-sebastian-palomino-933481-1955134.jpg" class="w-100 " alt="">
+                </div>
+                <div class="card-footer text-center bg-info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi in laboriosam id corrupti velit
+                </div>
+            </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+</body>
+</html>
